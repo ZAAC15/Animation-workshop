@@ -32,29 +32,28 @@ import Animated, {
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 const C = {
-  ink: '#152B28',
-  inkSoft: '#586D68',
-  forest: '#153C35',
-  forestDeep: '#102F2A',
-  mint: '#BDE7D5',
-  mintDeep: '#33856A',
-  paper: '#F4F6F3',
+  ink: '#2A2233',
+  inkSoft: '#766D80',
+  forest: '#4D3568',
+  forestDeep: '#241B2D',
+  mint: '#E4D7F2',
+  mintDeep: '#8D6BB5',
+  paper: '#F8F6FA',
   white: '#FFFFFF',
-  line: '#E2E9E4',
-  peach: '#F1C5A9',
-  lilac: '#B8A9E0',
-  yellow: '#EBCB75',
-  blue: '#9FC9D4',
+  line: '#EAE4EF',
+  peach: '#E8CFEA',
+  lilac: '#BFA9D8',
+  yellow: '#EBC8D0',
+  blue: '#AFA4CA',
 };
 
 const PRACTICES = [
-  { id: 'drag', number: '01', title: 'Arrastrar y girar', short: 'Dirección y rotación', detail: 'Mueve la figura de lado a lado y observa cómo responde su orientación.', mark: '↗', color: '#E4F1EA' },
-  { id: 'loading', number: '02', title: 'Carga continua', short: 'Indicador animado', detail: 'Un indicador circular y una barra avanzan en un ciclo continuo.', mark: '◌', color: '#EEF0F8' },
-  { id: 'multitouch', number: '03', title: 'Gestos multitáctiles', short: 'Escala, posición y giro', detail: 'Usa dos dedos para ampliar, desplazar y rotar la composición.', mark: '◎', color: '#F5EADF' },
-  { id: 'bounce', number: '04', title: 'Rebote al pulsar', short: 'Respuesta elástica', detail: 'Mantén pulsada la figura; al soltarla vuelve a su tamaño con un rebote.', mark: '●', color: '#E5EBF5' },
-  { id: 'carousel', number: '05', title: 'Carrusel de tarjetas', short: 'Navegación horizontal', detail: 'Desliza las tarjetas y descubre una transición con escala y rotación.', mark: '▱', color: '#F4E9E7' },
-  { id: 'accelerometer', number: '06', title: 'Movimiento del dispositivo', short: 'Acelerómetro', detail: 'Agita el teléfono para activar la respuesta de la figura.', mark: '⌁', color: '#E8EFE2' },
-  { id: 'home', number: '07', title: 'Inicio', short: 'Todas las prácticas', detail: 'Explora el taller completo desde el menú lateral.', mark: '⌂', color: '#DDECE4' },
+  { id: 'drag', number: '01', title: 'Arrastrar y girar', short: 'Dirección y rotación', detail: 'Mueve la figura de lado a lado y observa cómo responde su orientación.', mark: '↗', color: '#EEE5F6' },
+  { id: 'loading', number: '02', title: 'Carga continua', short: 'Indicador animado', detail: 'Un indicador circular y una barra avanzan en un ciclo continuo.', mark: '◌', color: '#E9E8F4' },
+  { id: 'multitouch', number: '03', title: 'Gestos multitáctiles', short: 'Escala, posición y giro', detail: 'Usa dos dedos para ampliar, desplazar y rotar la composición.', mark: '◎', color: '#F1E3EF' },
+  { id: 'bounce', number: '04', title: 'Rebote al pulsar', short: 'Respuesta elástica', detail: 'Mantén pulsada la figura; al soltarla vuelve a su tamaño con un rebote.', mark: '●', color: '#E6E2F2' },
+  { id: 'carousel', number: '05', title: 'Carrusel de tarjetas', short: 'Navegación horizontal', detail: 'Desliza las tarjetas y descubre una transición con escala y rotación.', mark: '▱', color: '#F4E5ED' },
+  { id: 'accelerometer', number: '06', title: 'Movimiento del dispositivo', short: 'Acelerómetro', detail: 'Agita el teléfono para activar la respuesta de la figura.', mark: '⌁', color: '#E7E2F1' },
 ];
 
 function Label({ children, style }) {
@@ -258,10 +257,10 @@ function BouncePractice() {
 }
 
 const CARDS = [
-  { category: 'FORMAS', title: 'Luz en reposo', text: 'Una pausa también tiene movimiento.', color: '#E4F1EA', accent: C.mintDeep, symbol: '◒' },
-  { category: 'COLOR', title: 'Tono de tarde', text: 'Una paleta que cambia con el gesto.', color: '#F3E8DD', accent: '#A86F4C', symbol: '◐' },
-  { category: 'VOLUMEN', title: 'Centro de gravedad', text: 'Equilibrio entre forma y espacio.', color: '#E8EAF4', accent: '#6A70A3', symbol: '◉' },
-  { category: 'TEXTURA', title: 'Superficie viva', text: 'Pequeños cambios, otra lectura.', color: '#E6EFE4', accent: '#617D5C', symbol: '◍' },
+  { category: 'FORMAS', title: 'Luz en reposo', text: 'Una pausa también tiene movimiento.', color: '#EEE5F6', accent: C.mintDeep, symbol: '◒' },
+  { category: 'COLOR', title: 'Tono de tarde', text: 'Una paleta que cambia con el gesto.', color: '#F1E3EF', accent: '#A76F98', symbol: '◐' },
+  { category: 'VOLUMEN', title: 'Centro de gravedad', text: 'Equilibrio entre forma y espacio.', color: '#E8E8F5', accent: '#786B9F', symbol: '◉' },
+  { category: 'TEXTURA', title: 'Superficie viva', text: 'Pequeños cambios, otra lectura.', color: '#E7E2F1', accent: '#725E88', symbol: '◍' },
 ];
 
 function CarouselPractice() {
@@ -357,19 +356,19 @@ function HomeScreen({ onSelect }) {
         <View style={styles.homeHeroCopy}>
           <Eyebrow>LABORATORIO INTERACTIVO</Eyebrow>
           <Text style={styles.homeTitle}>El movimiento{ '\n' }también se diseña.</Text>
-          <Text style={styles.homeSubtitle}>Siete experiencias breves para explorar gestos, respuesta y ritmo en una interfaz móvil.</Text>
+          <Text style={styles.homeSubtitle}>Seis experiencias breves para explorar gestos, respuesta y ritmo en una interfaz móvil.</Text>
           <Pressable onPress={() => onSelect('drag')} style={({ pressed }) => [styles.heroLink, pressed && styles.pressed]}><Text style={styles.heroLinkText}>Comenzar recorrido</Text><Text style={styles.heroLinkArrow}>→</Text></Pressable>
         </View>
         <View style={styles.heroArt}>
           <View style={styles.heroCircleBack} />
           <View style={styles.heroCircleFront}><View style={styles.heroCircleCore} /></View>
           <View style={styles.heroLine} />
-          <View style={styles.heroTag}><Text style={styles.heroTagText}>01 — 07</Text></View>
+          <View style={styles.heroTag}><Text style={styles.heroTagText}>01 — 06</Text></View>
         </View>
       </View>
-      <View style={styles.sectionHeading}><View><Eyebrow>EL TALLER</Eyebrow><Text style={styles.sectionTitle}>Siete formas de explorar</Text></View><Text style={styles.sectionCount}>07 PRÁCTICAS</Text></View>
+      <View style={styles.sectionHeading}><View><Eyebrow>EL TALLER</Eyebrow><Text style={styles.sectionTitle}>Seis formas de explorar</Text></View><Text style={styles.sectionCount}>06 PRÁCTICAS</Text></View>
       <View style={styles.practiceList}>
-        {PRACTICES.filter((item) => item.id !== 'home').map((item) => (
+        {PRACTICES.map((item) => (
           <Pressable key={item.id} onPress={() => onSelect(item.id)} style={({ pressed }) => [styles.practiceRow, pressed && styles.practiceRowPressed]}>
             <View style={[styles.practiceMark, { backgroundColor: item.color }]}><Text style={styles.practiceMarkText}>{item.mark}</Text></View>
             <View style={styles.practiceInfo}><Text style={styles.practiceName}>{item.title}</Text><Text style={styles.practiceShort}>{item.short}</Text></View>
@@ -382,7 +381,8 @@ function HomeScreen({ onSelect }) {
   );
 }
 
-function PracticeScreen({ practice }) {
+function PracticeScreen({ practice, onNavigate }) {
+  const index = PRACTICES.findIndex((item) => item.id === practice.id);
   let exercise;
   switch (practice.id) {
     case 'drag': exercise = <DragPractice />; break;
@@ -397,6 +397,16 @@ function PracticeScreen({ practice }) {
     <ScrollView contentContainerStyle={styles.exerciseContent} showsVerticalScrollIndicator={false}>
       <PracticeIntro practice={practice} />
       {exercise}
+      <View style={styles.routeNav}>
+        <Pressable onPress={() => onNavigate(index === 0 ? 'home' : PRACTICES[index - 1].id)} style={({ pressed }) => [styles.routeButton, styles.routeButtonPrevious, pressed && styles.pressed]} accessibilityRole="button" accessibilityLabel={index === 0 ? 'Volver al inicio' : `Ir a ${PRACTICES[index - 1].title}`}>
+          <Text style={styles.routeArrow}>←</Text>
+          <View style={styles.routeButtonCopy}><Text style={styles.routeLabel}>{index === 0 ? 'PORTADA' : 'ANTERIOR'}</Text><Text style={styles.routeTitle}>{index === 0 ? 'Inicio' : PRACTICES[index - 1].title}</Text></View>
+        </Pressable>
+        <Pressable onPress={() => onNavigate(index === PRACTICES.length - 1 ? 'home' : PRACTICES[index + 1].id)} style={({ pressed }) => [styles.routeButton, styles.routeButtonNext, pressed && styles.pressed]} accessibilityRole="button" accessibilityLabel={index === PRACTICES.length - 1 ? 'Finalizar y volver al inicio' : `Siguiente: ${PRACTICES[index + 1].title}`}>
+          <View style={[styles.routeButtonCopy, styles.routeButtonCopyNext]}><Text style={[styles.routeLabel, styles.routeLabelNext]}>{index === PRACTICES.length - 1 ? 'FINALIZAR' : 'SIGUIENTE'}</Text><Text style={[styles.routeTitle, styles.routeTitleNext]}>{index === PRACTICES.length - 1 ? 'Inicio' : PRACTICES[index + 1].title}</Text></View>
+          <Text style={styles.routeArrowNext}>→</Text>
+        </Pressable>
+      </View>
       <View style={styles.exerciseFooter}><Text style={styles.footerText}>TALLER DE MOVIMIENTO</Text><Text style={styles.footerText}>{practice.number} / 06</Text></View>
     </ScrollView>
   );
@@ -406,7 +416,7 @@ function AppShell() {
   const [currentId, setCurrentId] = useState('home');
   const [drawerOpen, setDrawerOpen] = useState(false);
   const drawerProgress = useSharedValue(0);
-  const currentPractice = PRACTICES.find((practice) => practice.id === currentId) || PRACTICES[6];
+  const currentPractice = PRACTICES.find((practice) => practice.id === currentId);
   const openDrawer = () => { setDrawerOpen(true); drawerProgress.value = withTiming(1, { duration: 230 }); };
   const closeDrawer = () => { drawerProgress.value = withTiming(0, { duration: 190 }); setTimeout(() => setDrawerOpen(false), 200); };
   const choose = (id) => { setCurrentId(id); closeDrawer(); };
@@ -420,10 +430,10 @@ function AppShell() {
           <View style={styles.menuStroke} /><View style={[styles.menuStroke, styles.menuStrokeShort]} /><View style={styles.menuStroke} />
         </Pressable>
         <View style={styles.headerBrand}><Text style={styles.headerEyebrow}>ESTUDIO DE INTERACCIÓN</Text><Text style={styles.headerTitle}>Taller de movimiento</Text></View>
-        <View style={styles.headerIndex}><Text style={styles.headerIndexText}>{currentPractice.id === 'home' ? '07' : currentPractice.number}</Text></View>
+        <View style={[styles.headerIndex, currentId === 'home' && styles.headerIndexHome]}><Text style={styles.headerIndexText}>{currentPractice ? currentPractice.number : 'INICIO'}</Text></View>
       </View>
       <View style={styles.mainArea}>
-        {currentId === 'home' ? <HomeScreen onSelect={setCurrentId} /> : <PracticeScreen practice={currentPractice} />}
+        {currentId === 'home' ? <HomeScreen onSelect={setCurrentId} /> : <PracticeScreen practice={currentPractice} onNavigate={setCurrentId} />}
       </View>
       {drawerOpen && (
         <View style={StyleSheet.absoluteFill} pointerEvents="box-none">
@@ -432,7 +442,12 @@ function AppShell() {
             <View style={styles.drawerTop}><View style={styles.drawerBrandMark}><View style={styles.drawerBrandCore} /></View><View><Text style={styles.drawerBrandTitle}>Taller de</Text><Text style={styles.drawerBrandTitle}>movimiento</Text></View></View>
             <Text style={styles.drawerSection}>CONTENIDO</Text>
             <ScrollView showsVerticalScrollIndicator={false}>
-              {PRACTICES.slice().reverse().map((practice) => (
+              <Pressable onPress={() => choose('home')} style={({ pressed }) => [styles.drawerItem, currentId === 'home' && styles.drawerItemActive, pressed && styles.drawerItemPressed]}>
+                <Text style={[styles.drawerItemNumber, currentId === 'home' && styles.drawerItemNumberActive]}>⌂</Text>
+                <Text style={[styles.drawerItemTitle, currentId === 'home' && styles.drawerItemTitleActive]}>Inicio</Text>
+                {currentId === 'home' && <View style={styles.drawerActiveDot} />}
+              </Pressable>
+              {PRACTICES.map((practice) => (
                 <Pressable key={practice.id} onPress={() => choose(practice.id)} style={({ pressed }) => [styles.drawerItem, currentId === practice.id && styles.drawerItemActive, pressed && styles.drawerItemPressed]}>
                   <Text style={[styles.drawerItemNumber, currentId === practice.id && styles.drawerItemNumberActive]}>{practice.number}</Text>
                   <Text style={[styles.drawerItemTitle, currentId === practice.id && styles.drawerItemTitleActive]}>{practice.title}</Text>
@@ -461,13 +476,14 @@ const styles = StyleSheet.create({
   safeArea: { flex: 1, backgroundColor: C.forestDeep },
   appHeader: { minHeight: 76, paddingHorizontal: 20, flexDirection: 'row', alignItems: 'center', backgroundColor: C.forestDeep },
   menuButton: { width: 42, height: 42, justifyContent: 'center', gap: 5, paddingHorizontal: 10, borderRadius: 12, backgroundColor: 'rgba(255,255,255,0.08)' },
-  menuStroke: { height: 1.6, width: 19, borderRadius: 2, backgroundColor: '#F2F7F3' },
+  menuStroke: { height: 1.6, width: 19, borderRadius: 2, backgroundColor: '#F7F2FA' },
   menuStrokeShort: { width: 13 },
   headerBrand: { flex: 1, marginLeft: 12 },
-  headerEyebrow: { color: '#A7C7BA', fontSize: 9, letterSpacing: 1.6, fontWeight: '700', marginBottom: 3 },
+  headerEyebrow: { color: '#C7B1DD', fontSize: 9, letterSpacing: 1.6, fontWeight: '700', marginBottom: 3 },
   headerTitle: { color: C.white, fontSize: 17, fontWeight: '600', letterSpacing: 0.1 },
   headerIndex: { width: 38, height: 34, borderWidth: 1, borderColor: 'rgba(255,255,255,0.24)', borderRadius: 10, justifyContent: 'center', alignItems: 'center' },
-  headerIndexText: { color: '#DAE9E1', fontSize: 11, letterSpacing: 1, fontWeight: '700' },
+  headerIndexHome: { width: 58 },
+  headerIndexText: { color: '#E9DFF1', fontSize: 10, letterSpacing: 0.8, fontWeight: '700' },
   mainArea: { flex: 1, backgroundColor: C.paper },
   label: { fontSize: 10, color: C.mintDeep, letterSpacing: 1.8, fontWeight: '700' },
   eyebrow: { fontSize: 10, color: C.mintDeep, letterSpacing: 1.8, fontWeight: '700' },
@@ -480,120 +496,132 @@ const styles = StyleSheet.create({
   cardTitle: { color: C.ink, fontSize: 15, fontWeight: '700', letterSpacing: -0.1 },
   cardBody: { color: C.inkSoft, fontSize: 13, lineHeight: 19, marginTop: 5 },
   dragStage: { height: 300, justifyContent: 'center' },
-  dragGuide: { position: 'absolute', left: '16%', right: '16%', top: '50%', height: 1, borderTopWidth: 1, borderColor: '#D6E1DA', borderStyle: 'dashed' },
-  guideDot: { position: 'absolute', top: '48.7%', width: 7, height: 7, borderRadius: 4, backgroundColor: '#9EB8AA' },
+  dragGuide: { position: 'absolute', left: '16%', right: '16%', top: '50%', height: 1, borderTopWidth: 1, borderColor: '#D9CCEA', borderStyle: 'dashed' },
+  guideDot: { position: 'absolute', top: '48.7%', width: 7, height: 7, borderRadius: 4, backgroundColor: '#B39BCB' },
   dragShapeWrap: { width: 132, height: 132, justifyContent: 'center', alignItems: 'center', zIndex: 1 },
-  dragShape: { width: 92, height: 92, borderRadius: 28, backgroundColor: C.forest, transform: [{ rotate: '45deg' }], alignItems: 'center', justifyContent: 'center', shadowColor: '#122D27', shadowOpacity: 0.19, shadowRadius: 16, shadowOffset: { width: 0, height: 9 }, elevation: 7 },
+  dragShape: { width: 92, height: 92, borderRadius: 28, backgroundColor: C.forest, transform: [{ rotate: '45deg' }], alignItems: 'center', justifyContent: 'center', shadowColor: '#352448', shadowOpacity: 0.2, shadowRadius: 16, shadowOffset: { width: 0, height: 9 }, elevation: 7 },
   dragShapeCore: { width: 30, height: 30, borderRadius: 10, borderWidth: 1, borderColor: 'rgba(255,255,255,0.56)' },
   stageCaption: { position: 'absolute', bottom: 18, left: 20, right: 20, flexDirection: 'row', justifyContent: 'space-between' },
-  stageCaptionText: { fontSize: 9, letterSpacing: 1.2, fontWeight: '700', color: '#82968E' },
+  stageCaptionText: { fontSize: 9, letterSpacing: 1.2, fontWeight: '700', color: '#8F829B' },
   loadingStage: { height: 320, paddingHorizontal: 27 },
-  spinnerOuter: { width: 68, height: 68, borderWidth: 3, borderColor: '#E3ECE6', borderRadius: 36, alignItems: 'center', justifyContent: 'center' },
+  spinnerOuter: { width: 68, height: 68, borderWidth: 3, borderColor: '#E8E1EF', borderRadius: 36, alignItems: 'center', justifyContent: 'center' },
   spinnerArc: { position: 'absolute', top: -3, left: 29, height: 17, width: 7, borderRadius: 4, backgroundColor: C.mintDeep },
   spinnerDot: { height: 9, width: 9, borderRadius: 5, backgroundColor: C.forest },
   loadingHeadline: { marginTop: 24, fontSize: 18, color: C.ink, fontWeight: '700' },
   loadingSubline: { marginTop: 7, fontSize: 12, color: C.inkSoft },
-  progressTrack: { marginTop: 28, width: '100%', height: 5, borderRadius: 3, backgroundColor: '#E8EEEA', overflow: 'hidden' },
+  progressTrack: { marginTop: 28, width: '100%', height: 5, borderRadius: 3, backgroundColor: '#EDE8F2', overflow: 'hidden' },
   progressFill: { height: 5, borderRadius: 3, backgroundColor: C.mintDeep },
   progressMeta: { width: '100%', marginTop: 10, flexDirection: 'row', justifyContent: 'space-between' },
-  artStage: { height: 335, backgroundColor: '#F9FAF7' },
+  artStage: { height: 335, backgroundColor: '#FAF8FB' },
   artStageTop: { position: 'absolute', left: 17, right: 17, top: 17, flexDirection: 'row', justifyContent: 'space-between' },
-  artStageLabel: { color: '#71827A', fontWeight: '700', fontSize: 8, letterSpacing: 1.3 },
+  artStageLabel: { color: '#796E83', fontWeight: '700', fontSize: 8, letterSpacing: 1.3 },
   artworkGesture: { width: 220, height: 220 },
-  artwork: { flex: 1, borderRadius: 5, backgroundColor: '#D8E7DF', overflow: 'hidden', borderWidth: 5, borderColor: '#FFFFFF', shadowColor: '#233A32', shadowOpacity: 0.16, shadowRadius: 17, shadowOffset: { width: 0, height: 8 }, elevation: 6 },
+  artwork: { flex: 1, borderRadius: 5, backgroundColor: '#E5D8EF', overflow: 'hidden', borderWidth: 5, borderColor: '#FFFFFF', shadowColor: '#382A47', shadowOpacity: 0.16, shadowRadius: 17, shadowOffset: { width: 0, height: 8 }, elevation: 6 },
   artSun: { position: 'absolute', width: 59, height: 59, top: 25, right: 30, borderRadius: 30, backgroundColor: C.yellow },
-  artMountainBack: { position: 'absolute', width: 190, height: 123, left: -36, top: 78, backgroundColor: '#78988B', transform: [{ rotate: '36deg' }], borderRadius: 17 },
-  artMountainFront: { position: 'absolute', width: 188, height: 121, right: -42, top: 100, backgroundColor: '#446B5D', transform: [{ rotate: '-34deg' }], borderRadius: 16 },
-  artWater: { position: 'absolute', left: 0, right: 0, bottom: 0, height: 63, backgroundColor: '#A7C9C1' },
-  artReflection: { position: 'absolute', height: 4, width: 70, bottom: 31, left: 69, borderRadius: 3, backgroundColor: '#F1DAA3' },
-  artReedOne: { position: 'absolute', width: 2, height: 54, bottom: 19, left: 31, backgroundColor: '#446B5D', transform: [{ rotate: '7deg' }] },
-  artReedTwo: { position: 'absolute', width: 2, height: 40, bottom: 17, left: 40, backgroundColor: '#446B5D', transform: [{ rotate: '-7deg' }] },
+  artMountainBack: { position: 'absolute', width: 190, height: 123, left: -36, top: 78, backgroundColor: '#AA97C0', transform: [{ rotate: '36deg' }], borderRadius: 17 },
+  artMountainFront: { position: 'absolute', width: 188, height: 121, right: -42, top: 100, backgroundColor: '#725E88', transform: [{ rotate: '-34deg' }], borderRadius: 16 },
+  artWater: { position: 'absolute', left: 0, right: 0, bottom: 0, height: 63, backgroundColor: '#C6B4D7' },
+  artReflection: { position: 'absolute', height: 4, width: 70, bottom: 31, left: 69, borderRadius: 3, backgroundColor: '#EBC8D0' },
+  artReedOne: { position: 'absolute', width: 2, height: 54, bottom: 19, left: 31, backgroundColor: '#685477', transform: [{ rotate: '7deg' }] },
+  artReedTwo: { position: 'absolute', width: 2, height: 40, bottom: 17, left: 40, backgroundColor: '#685477', transform: [{ rotate: '-7deg' }] },
   artSignature: { position: 'absolute', left: 11, top: 11 },
-  artSignatureText: { color: 'rgba(21,43,40,0.7)', fontSize: 7, fontWeight: '700', letterSpacing: 1 },
+  artSignatureText: { color: 'rgba(42,34,51,0.7)', fontSize: 7, fontWeight: '700', letterSpacing: 1 },
   artStageBottom: { position: 'absolute', bottom: 17 },
   actionRow: { marginHorizontal: 23, marginTop: 13, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 10 },
   helperText: { fontSize: 11, color: C.inkSoft, flexShrink: 1 },
   actionButton: { backgroundColor: C.forest, minHeight: 40, paddingHorizontal: 15, borderRadius: 12, justifyContent: 'center', alignItems: 'center' },
-  actionButtonQuiet: { backgroundColor: '#E7EEE9', borderWidth: 1, borderColor: '#DCE6DF' },
+  actionButtonQuiet: { backgroundColor: '#F0EBF5', borderWidth: 1, borderColor: '#E4DCEB' },
   actionButtonText: { fontSize: 11, fontWeight: '700', color: C.white },
   actionButtonTextQuiet: { color: C.forest },
   pressed: { opacity: 0.78, transform: [{ scale: 0.985 }] },
   bounceStage: { height: 310 },
-  bounceHalo: { position: 'absolute', width: 190, height: 190, borderRadius: 96, borderWidth: 1, borderColor: '#E4EBE6' },
-  bounceShape: { width: 112, height: 112, borderRadius: 35, backgroundColor: C.lilac, alignItems: 'center', justifyContent: 'center', shadowColor: '#4E4573', shadowOpacity: 0.22, shadowRadius: 19, shadowOffset: { width: 0, height: 10 }, elevation: 6 },
+  bounceHalo: { position: 'absolute', width: 190, height: 190, borderRadius: 96, borderWidth: 1, borderColor: '#E9E2EF' },
+  bounceShape: { width: 112, height: 112, borderRadius: 35, backgroundColor: C.lilac, alignItems: 'center', justifyContent: 'center', shadowColor: '#554364', shadowOpacity: 0.22, shadowRadius: 19, shadowOffset: { width: 0, height: 10 }, elevation: 6 },
   bounceCore: { width: 41, height: 41, borderRadius: 14, borderWidth: 1, borderColor: 'rgba(255,255,255,0.72)' },
-  bouncePrompt: { position: 'absolute', bottom: 21, color: '#82918A', letterSpacing: 1.5, fontSize: 9, fontWeight: '700' },
-  carouselStage: { height: 347, backgroundColor: '#F7F8F5' },
-  carouselSideCard: { position: 'absolute', width: 239, height: 242, borderRadius: 22, backgroundColor: '#E8EDE8', transform: [{ translateX: 18 }, { rotate: '7deg' }], opacity: 0.8 },
-  carouselCard: { width: 244, height: 246, padding: 21, borderRadius: 22, justifyContent: 'space-between', shadowColor: '#20342D', shadowOpacity: 0.14, shadowRadius: 17, shadowOffset: { width: 0, height: 8 }, elevation: 5 },
+  bouncePrompt: { position: 'absolute', bottom: 21, color: '#8A7F92', letterSpacing: 1.5, fontSize: 9, fontWeight: '700' },
+  carouselStage: { height: 347, backgroundColor: '#FAF8FB' },
+  carouselSideCard: { position: 'absolute', width: 239, height: 242, borderRadius: 22, backgroundColor: '#ECE6F1', transform: [{ translateX: 18 }, { rotate: '7deg' }], opacity: 0.8 },
+  carouselCard: { width: 244, height: 246, padding: 21, borderRadius: 22, justifyContent: 'space-between', shadowColor: '#342640', shadowOpacity: 0.14, shadowRadius: 17, shadowOffset: { width: 0, height: 8 }, elevation: 5 },
   carouselCardTop: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   carouselCategory: { fontSize: 9, fontWeight: '700', letterSpacing: 1.4 },
-  carouselCount: { fontSize: 9, fontWeight: '600', color: '#76827C', letterSpacing: 1 },
+  carouselCount: { fontSize: 9, fontWeight: '600', color: '#81758B', letterSpacing: 1 },
   carouselSymbol: { width: 80, height: 80, borderRadius: 26, justifyContent: 'center', alignItems: 'center', alignSelf: 'center', transform: [{ rotate: '-8deg' }] },
   carouselSymbolText: { color: '#FFFFFF', fontSize: 48, lineHeight: 57, fontWeight: '300' },
   carouselCardTitle: { fontSize: 21, color: C.ink, fontWeight: '700', letterSpacing: -0.5 },
   carouselCardText: { color: C.inkSoft, fontSize: 12, marginTop: 5 },
   carouselArrows: { position: 'absolute', bottom: 16, left: 30, right: 30, flexDirection: 'row', justifyContent: 'space-between' },
-  carouselArrow: { color: '#91A097', fontSize: 25, fontWeight: '300' },
+  carouselArrow: { color: '#93879D', fontSize: 25, fontWeight: '300' },
   carouselDots: { flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: 7, marginTop: 16 },
-  dot: { width: 6, height: 6, borderRadius: 4, backgroundColor: '#C9D4CD' },
+  dot: { width: 6, height: 6, borderRadius: 4, backgroundColor: '#D4CBDD' },
   dotActive: { width: 20, backgroundColor: C.mintDeep },
   sensorStage: { height: 310 },
-  sensorOrbit: { width: 184, height: 184, borderRadius: 95, borderWidth: 1, borderColor: '#E5EBE6', justifyContent: 'center', alignItems: 'center' },
-  sensorOrbitInner: { width: 136, height: 136, borderRadius: 70, borderStyle: 'dashed', borderWidth: 1, borderColor: '#D5E0D8' },
-  sensorShape: { position: 'absolute', width: 88, height: 88, borderRadius: 28, backgroundColor: C.forest, justifyContent: 'center', alignItems: 'center', shadowColor: '#102F2A', shadowOpacity: 0.23, shadowRadius: 16, shadowOffset: { width: 0, height: 8 }, elevation: 6 },
+  sensorOrbit: { width: 184, height: 184, borderRadius: 95, borderWidth: 1, borderColor: '#E9E2EF', justifyContent: 'center', alignItems: 'center' },
+  sensorOrbitInner: { width: 136, height: 136, borderRadius: 70, borderStyle: 'dashed', borderWidth: 1, borderColor: '#D9CDE6' },
+  sensorShape: { position: 'absolute', width: 88, height: 88, borderRadius: 28, backgroundColor: C.forest, justifyContent: 'center', alignItems: 'center', shadowColor: '#241B2D', shadowOpacity: 0.23, shadowRadius: 16, shadowOffset: { width: 0, height: 8 }, elevation: 6 },
   sensorShapeCore: { width: 30, height: 30, borderRadius: 10, borderWidth: 1, borderColor: 'rgba(255,255,255,0.65)' },
-  sensorCounter: { position: 'absolute', top: 17, right: 20, color: '#83968C', fontSize: 12, fontWeight: '700', letterSpacing: 1 },
-  sensorCaption: { position: 'absolute', bottom: 18, color: '#82968E', fontSize: 9, fontWeight: '700', letterSpacing: 1.2 },
+  sensorCounter: { position: 'absolute', top: 17, right: 20, color: '#8A7F92', fontSize: 12, fontWeight: '700', letterSpacing: 1 },
+  sensorCaption: { position: 'absolute', bottom: 18, color: '#8A7F92', fontSize: 9, fontWeight: '700', letterSpacing: 1.2 },
+  routeNav: { marginHorizontal: 18, marginTop: 22, flexDirection: 'row', gap: 10 },
+  routeButton: { flex: 1, minHeight: 62, paddingHorizontal: 12, borderRadius: 16, flexDirection: 'row', alignItems: 'center' },
+  routeButtonPrevious: { backgroundColor: '#EEE9F3', borderWidth: 1, borderColor: '#E4DCEB' },
+  routeButtonNext: { backgroundColor: C.forest, justifyContent: 'flex-end' },
+  routeArrow: { color: C.forest, fontSize: 17, fontWeight: '500', marginRight: 9 },
+  routeArrowNext: { color: C.mint, fontSize: 17, fontWeight: '500', marginLeft: 9 },
+  routeButtonCopy: { flexShrink: 1 },
+  routeButtonCopyNext: { alignItems: 'flex-end' },
+  routeLabel: { color: '#8D7DA0', fontSize: 8, fontWeight: '700', letterSpacing: 1.1 },
+  routeLabelNext: { color: '#D7C7E7' },
+  routeTitle: { color: C.ink, fontSize: 10, fontWeight: '700', marginTop: 4 },
+  routeTitleNext: { color: C.white, textAlign: 'right' },
   exerciseFooter: { marginHorizontal: 24, marginTop: 23, paddingTop: 12, borderTopWidth: 1, borderColor: C.line, flexDirection: 'row', justifyContent: 'space-between' },
-  footerText: { color: '#91A098', fontSize: 8, fontWeight: '700', letterSpacing: 1.25 },
+  footerText: { color: '#93899A', fontSize: 8, fontWeight: '700', letterSpacing: 1.25 },
   homeContent: { paddingBottom: 35 },
-  homeHero: { margin: 17, marginTop: 16, borderRadius: 23, backgroundColor: '#E7F0EA', minHeight: 300, overflow: 'hidden', flexDirection: 'row' },
+  homeHero: { margin: 17, marginTop: 16, borderRadius: 23, backgroundColor: '#EEE7F5', minHeight: 300, overflow: 'hidden', flexDirection: 'row' },
   homeHeroCopy: { flex: 1, paddingTop: 26, paddingLeft: 21, paddingBottom: 20, zIndex: 1 },
   homeTitle: { color: C.ink, fontSize: 31, lineHeight: 34, letterSpacing: -1.1, fontWeight: '700', marginTop: 13 },
-  homeSubtitle: { color: '#597169', fontSize: 12, lineHeight: 18, marginTop: 11, maxWidth: 250 },
+  homeSubtitle: { color: '#6F617C', fontSize: 12, lineHeight: 18, marginTop: 11, maxWidth: 250 },
   heroLink: { flexDirection: 'row', alignItems: 'center', marginTop: 18, alignSelf: 'flex-start', minHeight: 36, paddingHorizontal: 13, borderRadius: 11, backgroundColor: C.forest },
   heroLinkText: { color: C.white, fontSize: 10, fontWeight: '700' },
   heroLinkArrow: { color: C.mint, marginLeft: 11, fontSize: 14 },
   heroArt: { position: 'absolute', right: -20, top: 27, width: 150, height: 235 },
-  heroCircleBack: { position: 'absolute', top: 38, right: -17, width: 144, height: 144, borderRadius: 75, borderWidth: 1, borderColor: 'rgba(51,133,106,0.22)' },
-  heroCircleFront: { position: 'absolute', top: 59, right: 12, width: 99, height: 99, borderRadius: 34, transform: [{ rotate: '31deg' }], backgroundColor: '#9DCBB4', justifyContent: 'center', alignItems: 'center' },
-  heroCircleCore: { width: 39, height: 39, borderRadius: 14, backgroundColor: '#F7F8F4', borderWidth: 1, borderColor: '#78AE91' },
-  heroLine: { position: 'absolute', top: 18, right: 67, width: 1, height: 207, backgroundColor: 'rgba(51,133,106,0.21)', transform: [{ rotate: '26deg' }] },
+  heroCircleBack: { position: 'absolute', top: 38, right: -17, width: 144, height: 144, borderRadius: 75, borderWidth: 1, borderColor: 'rgba(141,107,181,0.28)' },
+  heroCircleFront: { position: 'absolute', top: 59, right: 12, width: 99, height: 99, borderRadius: 34, transform: [{ rotate: '31deg' }], backgroundColor: '#BFA9D8', justifyContent: 'center', alignItems: 'center' },
+  heroCircleCore: { width: 39, height: 39, borderRadius: 14, backgroundColor: '#F8F6FA', borderWidth: 1, borderColor: '#9D82BA' },
+  heroLine: { position: 'absolute', top: 18, right: 67, width: 1, height: 207, backgroundColor: 'rgba(141,107,181,0.24)', transform: [{ rotate: '26deg' }] },
   heroTag: { position: 'absolute', right: 37, bottom: 5, paddingHorizontal: 8, paddingVertical: 6, borderRadius: 8, backgroundColor: C.white },
   heroTagText: { color: C.mintDeep, fontSize: 8, fontWeight: '700', letterSpacing: 1 },
   sectionHeading: { marginTop: 10, marginHorizontal: 22, marginBottom: 13, flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between' },
   sectionTitle: { color: C.ink, fontSize: 19, fontWeight: '700', letterSpacing: -0.4, marginTop: 5 },
-  sectionCount: { color: '#8C9A93', fontSize: 8, letterSpacing: 1, fontWeight: '700', marginBottom: 3 },
+  sectionCount: { color: '#93899A', fontSize: 8, letterSpacing: 1, fontWeight: '700', marginBottom: 3 },
   practiceList: { marginHorizontal: 17, backgroundColor: C.white, borderRadius: 19, borderColor: C.line, borderWidth: 1, paddingHorizontal: 13 },
-  practiceRow: { minHeight: 68, flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, borderColor: '#EDF0ED' },
+  practiceRow: { minHeight: 68, flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, borderColor: '#F0ECF3' },
   practiceRowPressed: { opacity: 0.6 },
   practiceMark: { width: 38, height: 38, borderRadius: 12, alignItems: 'center', justifyContent: 'center' },
   practiceMarkText: { color: C.ink, fontSize: 19, fontWeight: '400' },
   practiceInfo: { marginLeft: 12, flex: 1 },
   practiceName: { color: C.ink, fontSize: 12, fontWeight: '700' },
-  practiceShort: { color: '#87948D', fontSize: 10, marginTop: 4 },
-  practiceNumber: { color: '#A5B0A9', fontSize: 9, fontWeight: '700', letterSpacing: 1, marginRight: 11 },
+  practiceShort: { color: '#8B8193', fontSize: 10, marginTop: 4 },
+  practiceNumber: { color: '#A298AA', fontSize: 9, fontWeight: '700', letterSpacing: 1, marginRight: 11 },
   practiceArrow: { color: C.mintDeep, fontSize: 16 },
   homeNote: { marginHorizontal: 23, marginTop: 23, flexDirection: 'row', alignItems: 'flex-start' },
   noteLine: { width: 2, height: 31, borderRadius: 2, backgroundColor: C.mintDeep, marginRight: 11 },
-  homeNoteText: { color: '#71827A', fontSize: 10, lineHeight: 16, flex: 1 },
-  scrim: { ...StyleSheet.absoluteFillObject, backgroundColor: '#071310' },
-  drawer: { position: 'absolute', left: 0, top: 0, bottom: 0, width: 310, backgroundColor: C.forestDeep, paddingTop: 27, paddingHorizontal: 20, paddingBottom: 21, elevation: 18, shadowColor: '#071310', shadowOpacity: 0.28, shadowRadius: 20, shadowOffset: { width: 8, height: 0 } },
+  homeNoteText: { color: '#786E81', fontSize: 10, lineHeight: 16, flex: 1 },
+  scrim: { ...StyleSheet.absoluteFillObject, backgroundColor: '#150F1C' },
+  drawer: { position: 'absolute', left: 0, top: 0, bottom: 0, width: 310, backgroundColor: C.forestDeep, paddingTop: 27, paddingHorizontal: 20, paddingBottom: 21, elevation: 18, shadowColor: '#150F1C', shadowOpacity: 0.28, shadowRadius: 20, shadowOffset: { width: 8, height: 0 } },
   drawerTop: { flexDirection: 'row', alignItems: 'center', paddingBottom: 28, borderBottomWidth: 1, borderColor: 'rgba(255,255,255,0.14)' },
-  drawerBrandMark: { width: 42, height: 42, borderRadius: 14, backgroundColor: '#BDE7D5', alignItems: 'center', justifyContent: 'center', transform: [{ rotate: '10deg' }], marginRight: 12 },
+  drawerBrandMark: { width: 42, height: 42, borderRadius: 14, backgroundColor: '#E4D7F2', alignItems: 'center', justifyContent: 'center', transform: [{ rotate: '10deg' }], marginRight: 12 },
   drawerBrandCore: { width: 16, height: 16, borderRadius: 5, borderWidth: 1, borderColor: C.forest },
-  drawerBrandTitle: { color: '#F2F7F3', fontSize: 15, lineHeight: 18, fontWeight: '700', letterSpacing: -0.2 },
-  drawerSection: { color: '#8FAFA1', fontSize: 9, letterSpacing: 1.6, fontWeight: '700', marginTop: 24, marginBottom: 10 },
+  drawerBrandTitle: { color: '#F7F2FA', fontSize: 15, lineHeight: 18, fontWeight: '700', letterSpacing: -0.2 },
+  drawerSection: { color: '#BEA9D1', fontSize: 9, letterSpacing: 1.6, fontWeight: '700', marginTop: 24, marginBottom: 10 },
   drawerItem: { minHeight: 47, borderRadius: 12, paddingHorizontal: 11, flexDirection: 'row', alignItems: 'center', marginVertical: 2 },
-  drawerItemActive: { backgroundColor: 'rgba(189,231,213,0.13)' },
+  drawerItemActive: { backgroundColor: 'rgba(228,215,242,0.14)' },
   drawerItemPressed: { opacity: 0.72 },
-  drawerItemNumber: { color: '#87A196', fontSize: 9, width: 27, fontWeight: '700', letterSpacing: 0.7 },
+  drawerItemNumber: { color: '#B8A7C3', fontSize: 9, width: 27, fontWeight: '700', letterSpacing: 0.7 },
   drawerItemNumberActive: { color: C.mint },
-  drawerItemTitle: { color: '#DFE9E2', fontSize: 12, flex: 1, fontWeight: '500' },
+  drawerItemTitle: { color: '#E8E0EC', fontSize: 12, flex: 1, fontWeight: '500' },
   drawerItemTitleActive: { color: C.white, fontWeight: '700' },
   drawerActiveDot: { width: 5, height: 5, borderRadius: 3, backgroundColor: C.mint },
   drawerFooter: { marginTop: 'auto' },
   drawerFooterRule: { height: 1, backgroundColor: 'rgba(255,255,255,0.14)', marginBottom: 14 },
-  drawerFooterText: { color: '#86A296', fontSize: 8, letterSpacing: 1.2, fontWeight: '700', marginTop: 4 },
+  drawerFooterText: { color: '#B09DBD', fontSize: 8, letterSpacing: 1.2, fontWeight: '700', marginTop: 4 },
 });
