@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Taller de movimiento",
+    "slug": "taller-de-movimiento",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0F2925"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "plugins": [
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "Taller de movimiento usa el acelerómetro para responder al movimiento del dispositivo."
+        }
+      ]
+    ]
+  }
+}
